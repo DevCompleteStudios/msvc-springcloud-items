@@ -1,4 +1,4 @@
-package com.devstudios.springcloud.msvc.items.msvc_items;
+package com.devstudios.springcloud.msvc.items;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
