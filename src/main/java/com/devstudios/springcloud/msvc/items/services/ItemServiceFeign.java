@@ -5,7 +5,6 @@ import java.util.Optional;
 import java.util.Random;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
 import com.devstudios.springcloud.msvc.items.clients.ProductFeignClient;
 import com.devstudios.springcloud.msvc.items.models.Item;
@@ -16,7 +15,6 @@ import feign.FeignException;
 
 
 
-@Service
 public class ItemServiceFeign implements ItemService {
 
     @Autowired
