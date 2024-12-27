@@ -66,8 +66,9 @@ public class ItemController {
                 product.setName("Camara Sony");
                 product.setPrice(500.00);
 
-                return Optional.of(new Item(null, 5));
-            });
+                return Optional.of(new Item(product, 5));
+            }
+        );
 
         if( p.isEmpty() ) return ResponseEntity.notFound().build();
 
