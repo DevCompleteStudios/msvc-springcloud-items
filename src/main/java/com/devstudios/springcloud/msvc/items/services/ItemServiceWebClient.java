@@ -39,20 +39,16 @@ public class ItemServiceWebClient implements ItemService {
         Map<String, Object> params = new HashMap<>();
         params.put("id", id);
 
-        try {
-            return Optional.of(
-                client.build()
-                .get()
-                .uri("/{id}", params)
-                .accept(MediaType.APPLICATION_JSON)
-                .retrieve()
-                .bodyToMono(Product.class)
-                .map( p -> new Item(p, 1) )
-                .block()
-            );
-        } catch (Exception e) {
-            return Optional.empty();
-        }
+        return Optional.of(
+            client.build()
+            .get()
+            .uri("/{id}", params)
+            .accept(MediaType.APPLICATION_JSON)
+            .retrieve()
+            .bodyToMono(Product.class)
+            .map( p -> new Item(p, 1) )
+            .block()
+        );
     }
 
 }
