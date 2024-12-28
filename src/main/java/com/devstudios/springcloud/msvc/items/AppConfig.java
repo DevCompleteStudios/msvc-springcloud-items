@@ -27,11 +27,13 @@ public class AppConfig {
                     .failureRateThreshold(50) // el porcentaje de error
                     .waitDurationInOpenState(Duration.ofSeconds(10)) // segundos en espera
                     .permittedNumberOfCallsInHalfOpenState(5)
+                    .slowCallDurationThreshold(Duration.ofSeconds(2L))
+                    .slowCallRateThreshold(50) // porcentaje de falla
                     .build()
                 )
                 .timeLimiterConfig(
                     TimeLimiterConfig.custom()
-                    .timeoutDuration(Duration.ofSeconds(3L)) // maximo de segundos de espera
+                    .timeoutDuration(Duration.ofSeconds(4L)) // maximo de segundos de espera
                     .build()
                 )
                 .build();
